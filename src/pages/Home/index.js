@@ -15,6 +15,51 @@ const HeroSection = styled.section`
   color: #ffffff;
   padding: 0 20px;
   min-height: 500px;
+  
+  @media screen and (max-width: 480px) {
+    padding: 0 15px;
+    min-height: 400px;
+  }
+`;
+
+const ServicesGrid = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 20px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 15px;
+  }
+`;
+const DifferentialsGrid = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 20px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 15px;
+  }
+`;
+const CoverageGrid = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 0 20px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 15px;
+  }
 `;
 
 const Title = styled.h1`
@@ -62,8 +107,6 @@ const HeroContent = styled.div`
   padding: 0 20px;
 `;
 
-
-
 const Section = styled.section`
   padding: 5rem 0;
 `;
@@ -73,15 +116,6 @@ const SectionTitle = styled.h2`
   font-size: 2.5rem;
   color: #003366;
   margin-bottom: 3rem;
-`;
-
-const ServicesGrid = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 0 20px;
 `;
 
 const ServiceCard = styled.div`
@@ -108,15 +142,6 @@ const ServiceCard = styled.div`
 
 const DifferentialsSection = styled(Section)`
   background: #f8faff;
-`;
-
-const DifferentialsGrid = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 0 20px;
 `;
 
 const DifferentialCard = styled.div`
@@ -150,20 +175,9 @@ const DifferentialCard = styled.div`
     font-size: 0.95rem;
   }
 `;
-
 const CoverageSection = styled(Section)`
   background: #ffffff;
 `;
-
-const CoverageGrid = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  padding: 0 20px;
-`;
-
 const LocationCard = styled.div`
   background: linear-gradient(120deg, rgba(0, 102, 204, 0.05), rgba(0, 102, 204, 0.1));
   padding: 1.5rem;
@@ -187,14 +201,18 @@ const LocationCard = styled.div`
     font-size: 0.9rem;
   }
 `;
-
 const CTAButton = styled(Button)`
   margin-top: 3rem;
   display: block;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 480px) {
+    width: calc(100% - 30px);
+    margin: 2rem auto 0;
+  }
 `;
+
 
 function Home() {
   return (

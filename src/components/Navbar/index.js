@@ -57,15 +57,12 @@ const NavMenu = styled.div`
     top: 80px;
     left: 0;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.98), rgba(240, 245, 255, 0.98));
-    padding: 2rem 0;
-    transition: all 0.4s ease;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 102, 204, 0.12);
     border-bottom: 2px solid rgba(0, 102, 204, 0.05);
     z-index: 1000;
-  }
-
-  @media screen and (max-width: 480px) {
-    padding: 1.5rem 0;
+    gap: 0;
   }
 `;
 
@@ -74,7 +71,7 @@ const NavLink = styled(Link)`
   padding: 0.8rem 1.8rem;
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: clamp(0.9rem, 2vw, 0.95rem);
   transition: all 0.3s ease;
   border-radius: 30px;
   text-transform: uppercase;
@@ -96,14 +93,15 @@ const NavLink = styled(Link)`
   }
 
   @media screen and (max-width: 768px) {
-    padding: 1.2rem 2rem;
+    padding: 1rem;
     width: 100%;
     text-align: center;
     border-radius: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     
     &:hover {
       background: linear-gradient(120deg, rgba(0, 102, 204, 0.05), rgba(0, 102, 204, 0.08));
+      transform: none;
     }
 
     &:active {
@@ -112,8 +110,8 @@ const NavLink = styled(Link)`
   }
 
   @media screen and (max-width: 480px) {
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
+    padding: 0.8rem;
+    font-size: 0.95rem;
   }
 `;
 

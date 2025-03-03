@@ -22,24 +22,6 @@ const ContactGrid = styled.div`
   }
 `;
 
-const Title = styled.h1`
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #003366;
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: 800;
-`;
-
-const Subtitle = styled.p`
-  text-align: center;
-  color: #666;
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  padding: 0 1rem;
-`;
-
 const Form = styled.form`
   background: #ffffff;
   padding: clamp(1.5rem, 4vw, 2.5rem);
@@ -83,6 +65,16 @@ const FormGroup = styled.div`
     min-height: 120px;
     resize: vertical;
   }
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 1rem;
+
+    input,
+    select,
+    textarea {
+      font-size: 16px; /* Prevents zoom on mobile */
+    }
+  }
 `;
 
 const SubmitButton = styled.button`
@@ -90,6 +82,44 @@ const SubmitButton = styled.button`
   padding: clamp(0.8rem, 2vw, 1rem);
   font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 600;
+  background: #0066cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #0052a3;
+  }
+
+  &:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+`;
+
+const Title = styled.h1`
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #003366;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+`;
+
+const Subtitle = styled.p`
+  text-align: center;
+  color: #666;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
 `;
 
 const SecondaryActions = styled.div`

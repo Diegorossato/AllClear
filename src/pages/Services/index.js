@@ -53,22 +53,35 @@ const ServicesGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: clamp(1.5rem, 3vw, 2.5rem);
-  padding: clamp(1rem, 2vw, 2rem) 0;
+  padding: clamp(1rem, 2vw, 2rem) 20px;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 1rem;
+    padding: 1rem 15px;
   }
 `;
 
 const ServiceCard = styled.div`
   background: #ffffff;
-  padding: clamp(1.8rem, 4vw, 2.5rem);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: all 0.4s ease;
   border: 1px solid rgba(0, 102, 204, 0.1);
+
+  @media screen and (max-width: 480px) {
+    padding: 1.2rem;
+    transform: none !important;
+  }
+
+  h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  }
+
+  p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
 
   &:hover {
     transform: translateY(-8px);
@@ -199,24 +212,12 @@ const CTATitle = styled.h2`
 const CTAButton = styled(Link)`
   display: inline-block;
   padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2.5rem);
-  background: linear-gradient(to right, #0066cc, #0052a3);
-  color: #ffffff;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
-  font-weight: 600;
-  border-radius: 30px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 102, 204, 0.2);
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.3);
-    background: linear-gradient(to right, #0052a3, #003d7a);
-  }
 
   @media screen and (max-width: 480px) {
-    width: 100%;
+    width: calc(100% - 30px);
     text-align: center;
+    margin: 1rem auto;
   }
 `;
 
