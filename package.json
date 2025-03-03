@@ -2,7 +2,6 @@
   "name": "allclear",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://trojj.github.io/allclear",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@mui/icons-material": "^6.4.6",
